@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One’s Chicken | Form Pemesanan</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Daftar Menu One’s Chicken</h1>
+      <p>
+        Isi formulir di bawah untuk membuat pesanan Anda di
+        <strong>One’s Chicken</strong>!
+      </p>
+    </header>
+
+    <main>
+      <form action="#" method="post" class="form-container">
+        <fieldset>
+          <legend></legend>Informasi Data Diri Anda</legend>
+
+          <label for="nama">Nama:</label>
+          <input
+            type="text"
+            id="nama"
+            name="nama"
+            maxlength="80"
+            placeholder="Masukkan nama Anda"
+            required
+          />
+
+          <label for="whatsapp">Nomor WhatsApp:</label>
+          <input
+            type="tel"
+            id="whatsapp"
+            name="whatsapp"
+            pattern="[0-9]{10,15}"
+            placeholder="Contoh: 081234567890"
+            required
+          />
+
+          <label for="jumlah">Jumlah Pesanan:</label>
+          <input
+            type="number"
+            id="jumlah"
+            name="jumlah"
+            min="1"
+            placeholder="Masukkan jumlah pesanan"
+          />
+        </fieldset>
+
+        <hr />
+
+        <section class="menu-section">
+          <h2>Menu Paket One’s Chicken</h2>
+          <p>Pilih salah satu paket favorit pelanggan kami:</p>
+
+          <div class="menu-list">
+            <article class="menu-card">
+              <img
+                src="https://i.ibb.co.com/ymSRt26S/onechicken.jpg"
+                alt="Paket A - Ayam Original"
+                class="menu-img"
+              />
+              <h3>Paket A - Ayam Original</h3>
+              <ul>
+                <li>1 Potong Ayam Goreng Original</li>
+                <li>Nasi Hangat</li>
+                <li>Es Teh Manis</li>
+              </ul>
+              <p><strong>Harga: Rp 13.000</strong></p>
+              <button type="button" class="ambil-menu" data-menu="Paket A">
+                🛒 Ambil Menu
+              </button>
+            </article>
+
+            <article class="menu-card">
+              <img
+                src="https://i.ibb.co.com/6JTwHf2T/Whats-App-Image-2025-11-04-at-09-32-45-2aa84c6e.jpg"
+                alt="Paket B"
+                class="menu-img"
+              />
+              <h3>Paket B - Ayam Pedas Spesial</h3>
+              <ul>
+                <li>1 Potong Ayam Pedas</li>
+                <li>Nasi Hangat</li>
+                <li>Es Jeruk Manis</li>
+              </ul>
+              <p><strong>Harga: Rp 28.000</strong></p>
+              <button type="button" class="ambil-menu" data-menu="Paket B">
+                🛒 Ambil Menu
+              </button>
+            </article>
+
+            <article class="menu-card">
+              <img
+                src="https://i.ibb.co.com/60SVXp3T/Hot-Cheese.jpg"
+                alt="Paket C"
+                class="menu-img"
+              />
+              <h3>Paket C - Ayam Hot + Cheese</h3>
+              <ul>
+                <li>3 Potong Ayam Hot + Cheese</li>
+                <li>2 Nasi + 2 Kentang Goreng</li>
+                <li>2 Es Teh Manis</li>
+              </ul>
+              <p><strong>Harga: Rp 75.000</strong></p>
+              <button type="button" class="ambil-menu" data-menu="Paket C">
+                🛒 Ambil Menu
+              </button>
+            </article>
+          </div>
+        </section>
+
+        <hr />
+
+        <fieldset>
+          <legend>Detail Tambahan Pesanan</legend>
+
+          <label for="spice-level">Level Kepedasan:</label>
+          <select id="spice-level" name="spice_level">
+            <option value="">-- Pilih level kepedasan --</option>
+            <option value="Tidak Pedas">Tidak Pedas</option>
+            <option value="Sedang">Sedang</option>
+            <option value="Pedas">Pedas</option>
+            <option value="Super Pedas">Super Pedas</option>
+          </select>
+
+          <label for="drink-choice">Pilihan Minuman:</label>
+          <select id="drink-choice" name="drink_choice">
+            <option value="">-- Pilih minuman --</option>
+            <option value="Es Teh Manis">Es Teh Manis</option>
+            <option value="Teh Lemon">Teh Lemon</option>
+            <option value="Air Mineral">Air Mineral</option>
+          </select>
+
+          <label for="extra-rice">Nasi Tambah:</label>
+          <select id="extra-rice" name="extra_rice">
+            <option value="0">Tidak Tambah</option>
+            <option value="1">1 Porsi</option>
+            <option value="2">2 Porsi</option>
+            <option value="3">3 Porsi</option>
+          </select>
+
+          <label for="extra-sauce">Sambal Ekstra:</label>
+          <select id="extra-sauce" name="extra_sauce">
+            <option value="0">Tidak Tambah</option>
+            <option value="1">1 Hot-Cheese</option>
+            <option value="2">2 Hot Sauce</option>
+            <option value="3">3 Sambel Geprek</option>
+          </select>
+
+          <label for="notes">Catatan Khusus:</label>
+          <textarea
+            id="notes"
+            name="notes"
+            placeholder="Contoh: tanpa es, sambal dipisah..."
+          ></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Ringkasan Pesanan Anda</legend>
+          <article id="preview">
+            <p>
+              <strong>Nama Pemesan:</strong> <span id="preview-nama">-</span>
+            </p>
+            <p>
+              <strong>Nomor WhatsApp:</strong> <span id="preview-wa">-</span>
+            </p>
+            <p>
+              <strong>Paket Dipilih:</strong> <span id="preview-menu">-</span>
+            </p>
+            <p>
+              <strong>Jumlah Pesanan:</strong>
+              <span id="preview-jumlah">-</span>
+            </p>
+            <p>
+              <strong>Level Pedas:</strong> <span id="preview-pedas">-</span>
+            </p>
+            <p><strong>Minuman:</strong> <span id="preview-minum">-</span></p>
+            <p>
+              <strong>Nasi Tambah:</strong> <span id="preview-nasi">-</span>
+            </p>
+            <p>
+              <strong>Sambal Ekstra:</strong> <span id="preview-sambal">-</span>
+            </p>
+            <p>
+              <strong>Catatan Khusus:</strong> <span id="preview-notes">-</span>
+            </p>
+          </article>
+        </fieldset>
+
+        <button type="submit">📨 Kirim Pesanan</button>
+      </form>
+    </main>
+
+    <footer>
+      <p>© 2025 One’s Chicken. By Dheka Airlangga.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
